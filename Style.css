@@ -90,9 +90,26 @@ head {
     display: inline;
     align-items: center;
     text-align: center;
-    
+    position: fixed;
 
     background-color: #2C56EA;
     border-radius: 25px;
     color: #FFFFFF;
+}
+#networking {
+position: absolute;
+width: 936px;
+height: 227px;
+
+font-family: 'Jost';
+font-style: normal;
+font-weight: 700;
+font-size: 70px;
+line-height: 139px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #C6C1BA;
+
 }
