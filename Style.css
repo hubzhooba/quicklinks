@@ -4,19 +4,19 @@ body {
 }
 
 head {
-    margin-top: 50;
+    display: inline-block; 
+    margin-top: 10px; 
 }
 #quicklinks1 {
     /* Quicklinks */
     
-    margin-left: 50px;
+
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 69px;
-    display: flex;
-    align-items: center;
+
     display: inline;
 
     color: #2C56EA;
@@ -24,15 +24,13 @@ head {
 
 #aboutus {
     /* About Us */
-    margin-left: 500px;
-    margin-right: 50px;
+
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 46px;
-    display: flex;
-    align-items: center;
+
     display: inline;
 
     color: #FFFFFF;
@@ -78,7 +76,11 @@ head {
 
 #login {
     /* Login */
-
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 50px;
+    margin-top: 25px;
 
     width: 320px;
     height: 100px;
@@ -87,29 +89,37 @@ head {
     font-weight: 700;
     font-size: 32px;
     line-height: 46px;
-    display: inline;
-    align-items: center;
-    text-align: center;
-    position: fixed;
 
     background-color: #2C56EA;
     border-radius: 25px;
     color: #FFFFFF;
 }
 #networking {
-position: absolute;
-width: 936px;
-height: 227px;
+
+
 
 font-family: 'Jost';
 font-style: normal;
 font-weight: 700;
 font-size: 70px;
-line-height: 139px;
 display: flex;
 align-items: center;
+justify-content: center;
 text-align: center;
 
 color: #C6C1BA;
 
+}
+
+#everything {
+font-family: 'Jost';
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+color: #2C56EA;
 }
