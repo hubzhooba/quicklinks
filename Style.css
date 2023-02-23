@@ -6,6 +6,8 @@ body {
 head {
     display: inline-block; 
     margin-top: 10px; 
+    margin-left: 100px;
+    margin-right: 100px;
 }
 #quicklinks1 {
     /* Quicklinks */
@@ -15,7 +17,7 @@ head {
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
-    line-height: 69px;
+
 
     display: inline;
 
@@ -29,7 +31,9 @@ head {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    line-height: 46px;
+
+
+
 
     display: inline;
 
@@ -79,7 +83,7 @@ head {
     position: fixed;
     top: 0;
     right: 0;
-    margin-right: 50px;
+    margin-right: auto;
     margin-top: 25px;
 
     width: 320px;
@@ -122,4 +126,23 @@ justify-content: center;
 text-align: center;
 
 color: #2C56EA;
+}
+
+#quicklinks2 {
+    /* Quicklinks */
+    
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+
+    color: #FFFFFF;
 }
