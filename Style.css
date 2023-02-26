@@ -233,6 +233,7 @@ color: #2C56EA;
     border-radius: 20px;
 }
 
+
 #rectangle6{
     position: relative;
     width: 500px;
@@ -262,3 +263,11 @@ color: #2C56EA;
     
     
   }
+
+.card-title {
+    color: #fff;
+    font-size: 1.88em
+  }
+.card-text{
+    color: rgba(255,255,255,.69)
+}
