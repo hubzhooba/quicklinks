@@ -265,9 +265,16 @@ color: #2C56EA;
   }
 
 .card-title {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
     color: #fff;
-    font-size: 1.88em
+    font-size: 28px
   }
 .card-text{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24;
     color: rgba(255,255,255,.69)
 }
