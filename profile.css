@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+* 
+
+{
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  body {
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost';
+    font-size: 16px;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #1E1E1E;
+  }
+  
+  /* Header styles */
+  .header {
+    text-align: center;
+  }
+  
+  .avatar {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .display-name {
+    margin-top: 20px;
+    font-family: 'Jost';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+  
+  .biography {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .hashtags {
+    margin-top: 20px;
+  }
+  
+  .hashtags span {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #2B2828;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Links styles */
+  .links {
+    margin-top: 30px;
+  }
+  
+  .link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #2C56EA;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .link:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .link i {
+    margin-right: 10px;
+  }
+  
+  

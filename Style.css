@@ -259,9 +259,7 @@ color: #2C56EA;
 .container {
     display: flex;
     justify-content: center;
-    margin-bottom: 500px;
-    
-    
+    margin-bottom: 500px;   
   }
 
 .card-title {
@@ -287,13 +285,12 @@ color: #2C56EA;
 }
 
 .image-container{
+    display: relative;
     border-radius: 32px;
     margin-left: 45px;
     margin-right: 20px;
     margin-top: 35px;
     width: 350px;
     border: 1px solid #000000;
-  
-
 }
 
