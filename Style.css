@@ -92,7 +92,7 @@ header {
     transform: rotate(90deg);
 }
 
-#login {
+.login {
     /* Login */
     position: absolute;
     top: 54px;
@@ -294,3 +294,51 @@ color: #2C56EA;
     border: 1px solid #000000;
 }
 
+.login-popup {
+    display: none;
+}
+
+.login-container {
+    line-height:50px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    border-radius: 57px;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    background-color: #2C56EA;
+    position: relative;
+}
+
+.login-form-button {
+    width: 400px;
+    height: 30px;
+    background: #D9D9D9;
+    border-radius: 15px;
+}
+.register-button {
+    width: 400px;
+    height: 30px;
+    background: #3BBF68;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.login-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    color: #fff
+}
+
+.login-quicklinks {
+    position: relative;
+    font-family: 'Jost';
+    font-style: normal;
+    margin-left: 500px;
+    bottom: 0;
+    color: #fff
+}
