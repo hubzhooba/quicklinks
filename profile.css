@@ -30,6 +30,14 @@ body {
   position: relative;
 }
 
+.avatar::before {
+  content: "Add Avatar +";
+  font-size: 16px;
+  color: #aaa;
+  text-align: center;
+  display: block;
+  padding-top: 60px; /* adjust the value as needed to center the text */
+}
 .avatar {
   display: block;
   width: 120px;
@@ -37,6 +45,11 @@ body {
   margin: 0 auto;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-image: none;
 }
 
 .display-name {
