@@ -11,6 +11,7 @@
             <p id="quicklinks1">Quicklinks</p>
             <button class="login" type="button" onclick="openForm()">Login</button>
     </header>
+<<<<<<< Updated upstream
     
    
         <div class="modal" id="myForm"> <!-- TODO: Add image as shown in Figma -->
@@ -29,6 +30,33 @@
         
         </div>
    
+=======
+ 
+    <button onclick="openForm()">Open Login Popup</button>
+
+	<div class="login-popup" id="myForm">
+		<form action="/login_page.php" class="login-container">
+			<input class="login-form-button" type="text" placeholder="Email Address" name="email" required>
+			<br>
+			<input class="login-form-button" type="password" placeholder="Password" name="psw" required>
+			<br>
+			<button class="register-button" type="submit">Register</button>
+			<br>
+			<button class="login-button" type="submit">Login</button>
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			<p class="login-quicklinks"> Quicklinks</p>
+		</form>
+	</div>
+    <script>
+		function openForm() {
+		  document.getElementById("myForm").classList.add("show");
+		}
+
+		function closeForm() {
+		  document.getElementById("myForm").classList.remove("show");
+		}
+	</script>
+>>>>>>> Stashed changes
     
     <body>
         <p id="networking"> Networking has <br> never been so easy.</p>
