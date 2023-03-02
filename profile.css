@@ -1,8 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
-
+@import url('https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css');
 html
+button#profile-btn {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
 
+button:hover {
+  opacity: 0.8;
+}
+.feather {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+}
 body {
   height: 100%;
   background-color: hsl(0, 1%, 18%);
@@ -159,6 +187,7 @@ body {
 .form-input:focus {
   outline: none;
 }
+
 
 .form-submit {
   margin-top: 10px;

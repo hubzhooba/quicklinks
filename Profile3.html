@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Profile</title>
+    <title>Hackerman's Profile</title>
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
 
@@ -12,8 +12,8 @@
       
       <div class="header">
         <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <button type="submit"><i class="fas fa-search"></i></button>
+            <input type="text" placeholder="Search..." id="search-box">
+          <button type="submit" onclick="search()">Search</button>
         </div>
         <div class="buttons">
           <button class="share-btn"><i class="fas fa-share"></i></button>
@@ -31,13 +31,26 @@
       
       <div class="links">
         <a class="link" href="https://www.facebook.com/ian"><i class="fab fa-facebook"></i> Facebook</a>
-        <a class="link" href="https://blog.ancient8.gg/axie-infinity-origin-strategy-triple-aqua-team/"><i class="feather icon-feather"></i> My Favorite Build</a>
+        <a class="link" href="https://blog.ancient8.gg/axie-infinity-origin-strategy-triple-aqua-team/"><i class="fa-feather"></i> My Favorite Build</a>
         <a class="link" href="https://www.twitter.com/johndoe"><i class="fab fa-twitter"></i> Twitter</a>
         <a class="link" href="jaime_magsino@dlsu.edu.ph"><i class="fas fa-envelope"></i> Email</a>
       </div>
       
     </div>
-
+    <button id="profile-btn"><a href="Profile.html">Go Back to Your Profile</a></button>
     <script src="https://kit.fontawesome.com/b91caa2f2a.js" crossorigin="anonymous"></script>
+    <script>
+        function search() {
+          var query = document.getElementById("search-box").value;
+          if (query.toLowerCase() === "lilman") {
+            window.location.href = "Profile2.html";
+          }else if (query.toLowerCase() === "hackerman"){
+            window.location.href = "Profile3.html";
+          }else{
+            alert('Profile Does Not Exist')
+          }
+          
+        }
+      </script>
   </body>
 </html>

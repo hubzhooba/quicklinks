@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Profile</title>
+    <title>Lilman's Profile</title>
     <link rel="stylesheet" href="profile.css">
   </head>
   <body>
@@ -10,8 +10,8 @@
       
       <div class="header">
         <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <button type="submit"><i class="fas fa-search"></i></button>
+            <input type="text" placeholder="Search..." id="search-box">
+          <button type="submit" onclick="search()">Search</button>
         </div>
         <div class="buttons">
           <button class="share-btn"><i class="fas fa-share"></i></button>
@@ -32,9 +32,18 @@
         <a class="link" href="https://twitter.com/TenZOfficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i> Twitter</a>
         <a class="link" href="https://www.britannica.com/biography/Michael-Jordan#:~:text=American%20basketball%20player%20Michael%20Jordan,of%20the%20Year%20in%201988."><i class="fas fa-bio"></i> My Favorite Player</a>
       </div>
-      
+      <button id="profile-btn"><a href="Profile.html">Go Back to Your Profile</a></button>
     </div>
 
     <script src="https://kit.fontawesome.com/b91caa2f2a.js" crossorigin="anonymous"></script>
+    <script>
+        function search() {
+          var query = document.getElementById("search-box").value;
+          if (query.toLowerCase() === "hackerman") {
+            window.location.href = "Profile3.html";
+          }
+          
+        }
+      </script>
   </body>
 </html>
