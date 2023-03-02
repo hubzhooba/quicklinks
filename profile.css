@@ -158,3 +158,43 @@ body {
   text-align: center;
   transition: all 0.
 }
+/* Search bar styles */
+.search-bar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+.search-bar button[type="submit"] {
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #2C56EA;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.search-bar button[type="submit"]:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.search-bar i {
+  margin-right: 10px;
+}

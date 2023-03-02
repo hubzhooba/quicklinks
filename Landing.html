@@ -7,110 +7,89 @@
 </head>
 
    
-    <header>
-            <p id="quicklinks1">Quicklinks</p>
-            <button class="login" type="button" onclick="openForm()">Login</button>
-    </header>
-<<<<<<< Updated upstream
+<header>
+    <p id="quicklinks1">Quicklinks</p>
+    <div class="search-form">
+        <input class="search-input" type="text" placeholder="Search...">
+        <button class="search-button">Search</button>
+      </div>
+    <button class="login" type="button" onclick="openForm()">Login</button>
+  </header>
+  
+
+
+<div class="modal" id="myForm"> <!-- TODO: Add image as shown in Figma -->
+
+    <form action="Profile.html" class="login-container">
     
-   
-        <div class="modal" id="myForm"> <!-- TODO: Add image as shown in Figma -->
+    <input class="login-form-button" type="text" placeholder="Email Address" name="email" required>
+    <br>
+    <input class="login-form-button" type="password" placeholder="Password" name="psw" required>
+    <br>
+    <button class="register-button" type="submit">Register</button>
+    <br>
+    <button class="login-button" type="submit">Login</button>
+    <p class ="login-quicklinks"> Quicklinks</p>
+    </form>
 
-            <form action="Profile.html" class="login-container">
-            
-            <input class="login-form-button" type="text" placeholder="Email Address" name="email" required>
-            <br>
-            <input class="login-form-button" type="password" placeholder="Password" name="psw" required>
-            <br>
-            <button class="register-button" type="submit">Register</button>
-            <br>
-            <button class="login-button" type="submit">Login</button>
-            <p class ="login-quicklinks"> Quicklinks</p>
-            </form>
-        
-        </div>
-   
-=======
- 
-    <button onclick="openForm()">Open Login Popup</button>
+</div>
 
-	<div class="login-popup" id="myForm">
-		<form action="/login_page.php" class="login-container">
-			<input class="login-form-button" type="text" placeholder="Email Address" name="email" required>
-			<br>
-			<input class="login-form-button" type="password" placeholder="Password" name="psw" required>
-			<br>
-			<button class="register-button" type="submit">Register</button>
-			<br>
-			<button class="login-button" type="submit">Login</button>
-			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-			<p class="login-quicklinks"> Quicklinks</p>
-		</form>
-	</div>
-    <script>
-		function openForm() {
-		  document.getElementById("myForm").classList.add("show");
-		}
 
-		function closeForm() {
-		  document.getElementById("myForm").classList.remove("show");
-		}
-	</script>
->>>>>>> Stashed changes
+<body>
+</div>
+<p id="networking"> Networking has <br> never been so easy.</p>
+<p id="everything"> Everything, everywhere all at once.</p>
+<button id="getstarted" type="button" onclick="openForm()">Get Started</button>
+<div id="rectangle4"></div>
+<div id="how-quicklink-works">
+    <p>How Quicklink <br> works.</p>
+  </div>
+  
+<div id="simple">
+    <p>Simple, Secure, People-Powered</p>
+</div>
+<div class="container">
+<div id="rectangle5">
+    <div class = "image-container">
+        <img src="images/editprofile_ui.PNG" loading="lazy" style="width: 350px; height:459px;" />
+    </div>               
+    <div class="card-heading">
+        <h3 class="card-title">Create your profile</h3>
+        <p class="card-text">Customize your profile and make your presence seen.</p>
+    </div>
+</div>
+<div id="rectangle6">
+    <div class = "image-container">
+        <img src="images/mylinks_ui.PNG" loading="lazy" style="width: 350px; height:459px;" />
+    </div>
+    <h3 class="card-title">Set your links</h3>
+    <p class="card-text">Choose what side of you that you want to share.</p>
+</div>
+<div id="rectangle7">
+    <div class = "image-container">
+        <img src="images/network_ui.png" loading="lazy" style="width: 350px; height:459px;" />
+    </div>
+    <h3 class="card-title">Network</h3>
+    <p class="card-text">Get networking by sharing your quicklinks with other users.</p>
+</div>
+</div>
+
+
+
+
+<script>
+    var modal = document.getElementById("myForm");
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
     
-    <body>
-        <p id="networking"> Networking has <br> never been so easy.</p>
-        <p id="everything"> Everything, everywhere all at once.</p>
-        <button id="getstarted" type="button" onclick="openForm()">Get Started</button>
-        <div id="rectangle4"></div>
-        <div id="how-quicklink-works">
-            <p>How Quicklink <br> works.</p>\
-          </div>
-          
-        <div id="simple">
-            <p>Simple, Secure, People-Powered</p>
-        </div>
-        <div class="container">
-        <div id="rectangle5">
-            <div class = "image-container">
-                <img src="images/editprofile_ui.PNG" loading="lazy" style="width: 350px; height:459px;" />
-            </div>               
-            <div class="card-heading">
-                <h3 class="card-title">Create your profile</h3>
-                <p class="card-text">Customize your profile and make your presence seen.</p>
-            </div>
-        </div>
-        <div id="rectangle6">
-            <div class = "image-container">
-                <img src="images/mylinks_ui.PNG" loading="lazy" style="width: 350px; height:459px;" />
-            </div>
-            <h3 class="card-title">Set your links</h3>
-            <p class="card-text">Choose what side of you that you want to share.</p>
-        </div>
-        <div id="rectangle7">
-            <div class = "image-container">
-                <img src="images/network_ui.png" loading="lazy" style="width: 350px; height:459px;" />
-            </div>
-            <h3 class="card-title">Network</h3>
-            <p class="card-text">Get networking by sharing your quicklinks with other users.</p>
-        </div>
-        </div>
+    window.onclick = function(event) {
+        if (event.target == modal) {
 
-
-
-
-        <script>
-            var modal = document.getElementById("myForm");
-            function openForm() {
-              document.getElementById("myForm").style.display = "block";
-            }
-            
-            window.onclick = function(event) {
-                if (event.target == modal) {
                     modal.style.display = "none";
                 }
             }
-        </script>
+        </script>   
         
 
     </body>
