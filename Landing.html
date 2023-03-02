@@ -25,12 +25,18 @@
     <br>
     <input class="login-form-button" type="password" placeholder="Password" name="psw" required>
     <br>
-    <button class="register-button" type="submit">Register</button>
+    <button class="register-button" onclick="openRegister()" >Register</button>
     <br>
     <button class="login-button" type="submit">Login</button>
     <p class ="login-quicklinks"> Quicklinks</p>
     </form>
 
+</div>
+
+<div class="modal" id="registerCheck">
+    <div class="login-container">
+        
+    </div>
 </div>
 
 
@@ -78,14 +84,21 @@
 
 <script>
     var modal = document.getElementById("myForm");
+    var modal1 = document.getElementById("registerCheck");
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
+
+    function openRegister() {
+        document.getElementById("registerCheck").style.display = "block";
+        document.getElementById("myForm").style.display = "none";
+    }
     
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target == modal || event.target == modal1) {
 
                     modal.style.display = "none";
+                    modal1.style.display = "none";
                 }
             }
         </script>   
