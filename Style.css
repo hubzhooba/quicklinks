@@ -304,18 +304,27 @@ color: #2C56EA;
         border-radius: 32px;
     
 }
-.login-popup {
-    display: none;
-}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
 
 .login-container {
     line-height:50px;
     text-align: center;
     vertical-align: middle;
-    display: table-cell;
     border-radius: 57px;
-    width: 500px;
-    height: 500px;
+    margin-left: 600px;
+    margin-right: 600px;
     padding: 10px;
     background-color: #2C56EA;
     position: relative;

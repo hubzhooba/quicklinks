@@ -11,23 +11,24 @@
             <p id="quicklinks1">Quicklinks</p>
             <button class="login" type="button" onclick="openForm()">Login</button>
     </header>
- 
-    <div class="login-popup" id="myForm"> <!-- TODO: Figure out how to display this without interfering with other elements / Add image as shown in Figma -->
-                
-        <form action="/login_page.php" class="login-container">
-        
-        <input class="login-form-button" type="text" placeholder="Email Address" name="email" required>
-        <br>
-        <input class="login-form-button" type="password" placeholder="Password" name="psw" required>
-        <br>
-        <button class="register-button" type="submit">Register</button>
-        <br>
-        <button class="login-button" type="submit">Login</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        <p class ="login-quicklinks"> Quicklinks</p>
-        </form>
     
-    </div>
+   
+        <div class="modal" id="myForm"> <!-- TODO: Add image as shown in Figma -->
+
+            <form action="/login_page.php" class="login-container">
+            
+            <input class="login-form-button" type="text" placeholder="Email Address" name="email" required>
+            <br>
+            <input class="login-form-button" type="password" placeholder="Password" name="psw" required>
+            <br>
+            <button class="register-button" type="submit">Register</button>
+            <br>
+            <button class="login-button" type="submit">Login</button>
+            <p class ="login-quicklinks"> Quicklinks</p>
+            </form>
+        
+        </div>
+   
     
     <body>
         <p id="networking"> Networking has <br> never been so easy.</p>
@@ -71,12 +72,15 @@
 
 
         <script>
+            var modal = document.getElementById("myForm");
             function openForm() {
               document.getElementById("myForm").style.display = "block";
             }
             
-            function closeForm() {
-              document.getElementById("myForm").style.display = "none";
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
         </script>
         
