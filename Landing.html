@@ -17,18 +17,18 @@
 
     <form action="Profile.html" class="login-container">
     
-    <input class="login-form-button" type="text" placeholder="Email Address" name="email" required>
+    <input class="login-form-button" type="text" placeholder="Email Address" name="email" required id="e">
     <br>
-    <input class="login-form-button" type="password" placeholder="Password" name="psw" required>
+    <input class="login-form-button" type="password" placeholder="Password" name="psw" required id="p">
     <br>
-    <button class="register-button" onclick="openRegister()">Register</button>
+    <button type="button" class="register-button" onclick="openRegister()" id="register" >Register</button>
     <br>
     <button class="login-button" type="submit">Login</button>
     <p class ="login-quicklinks"> Quicklinks</p>
 
 </div>
 
-<div class="modal" id="registerCheck">
+<div class="modal" id="registerCheck">2
     <div class="login-container">
         <h1 class ="register-thanks">Thank you for registering</h1>
         <button class="register-button" type="submit" >Click here to start editing your profile now</button>
@@ -81,13 +81,25 @@
 <script>
     var modal = document.getElementById("myForm");
     var modal1 = document.getElementById("registerCheck");
+
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
 
     function openRegister() {
-        document.getElementById("registerCheck").style.display = "block";
-        document.getElementById("myForm").style.display = "none";
+        var val1 = document.getElementById('e').value;
+        var val2 = document.getElementById('p').value;
+    
+        var checkInput1 = document.getElementById("e");
+        var checkInput2 = document.getElementById("p")
+            if (checkInput1.value && checkInput2.value) {
+                document.getElementById("registerCheck").style.display = "block";
+                document.getElementById("myForm").style.display = "none";
+                return 0;
+            }
+            else {
+            }
+
     }
     
     window.onclick = function(event) {
@@ -97,6 +109,7 @@
                     modal1.style.display = "none";
                 }
             }
+
 </script>   
         
 
