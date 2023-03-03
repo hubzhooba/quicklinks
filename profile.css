@@ -241,10 +241,15 @@ body {
   margin-right: 10px;
 }
 
-.result-box{
-  margin-left: 10px;
+.result-box {
+  width: calc(100% - 40px);
+  /* The width is set to the total width of the container (100%) minus the left and right padding of the search input (20px each) */
+  margin-left: 20px;
+  margin-top: 50px;
   border-top: 1px solid #999;
-  padding: 10px;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 200px;
 }
 
 .result-box ul li {
@@ -252,8 +257,15 @@ body {
   border-radius: 3px;
   padding: 10px;
   cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  padding-top: 60px;
+  width: 20%;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.result-box ul li:hover{
-  background: #e9f3ff;
+.result-box ul li:hover {
+  background-color: #e9f3ff;
 }
