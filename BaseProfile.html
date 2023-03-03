@@ -15,7 +15,7 @@
     </div>
     <div class="buttons">
       <button class="share-btn"><i class="fas fa-share"></i></button>
-      <button class="settings-btn"><i class="fas fa-cog"></i></button>
+      <button class="settings-btn" onclick="openSettings()"><i class="fas fa-cog"></i></button>
     </div>
     <img class="avatar" src="images/emptypfp.jpg" alt="">
     <h1 class="display-name">Your Name</h1>
@@ -37,6 +37,141 @@
   
 </div>
 
+
+<!-- HTML for Setting-->
+
+<div class="modal" id="Settings">
+  <div class="Set-container" id="Edit-Profile">
+
+    <div id="Settings-lists">
+        <p class="Quicklinks-name">Quicklinks</p>
+        <ul class="Settings-link">
+            <li><i class="fa-solid fa-pen-to-square"></i><b><u> Edit Profile</u></b></li>
+            <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToLinks()"> My Links</a></li>
+            <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToAccount()"> Account Management</a></li>
+        </ul>
+    </div>
+
+    <header class="circle">
+    <i class="fa-solid fa-pen-to-square"></i>
+    </header>
+
+    <label for="dname" class="dname">Display Name</label>
+    <input class= "Name-input" type="text" placeholder="Enter Display Name" name="dname" required>
+
+    <label for="bio" class="bio">Biography</label>
+    <textarea class="Bio-input" placeholder="Add Bio" name="bio" required></textarea>
+
+    <label for="tags" class="tags">Tags</label>
+    <textarea class="Tag-input" placeholder="Add Tag" name="tags" required></textarea>
+
+    <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
+    <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
+  </div>
+
+  <div class="Set-container" id="My-Links">
+    <div id="Settings-lists">
+        <p class="Quicklinks-name">Quicklinks</p>
+        <ul class="Settings-link">
+            <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToEdit()"> Edit Profile</a></li>
+            <li><i class="fa-solid fa-pen-to-square"></i><b><u> My Links</u></b></li>
+            <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToAccount()"> Account Management</a></li>
+        </ul>
+    </div>
+
+    <div id="My-Link"><h3>My Links</h3></div>
+    <button class="Add-button" type="button"><i class="fa-solid fa-circle-plus"></i></button>
+
+    <div id="Facebook-Link">Facebook</div>
+    <button class="Edit-button_1" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+    <button class="Remove-button_1" type="button"><i class="fa-solid fa-circle-xmark"></i></button>
+
+    <div id="Twitter-Link">Twitter</div>
+    <button class="Edit-button_2" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+    <button class="Remove-button_2" type="button"><i class="fa-solid fa-circle-xmark"></i></button>
+
+    <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
+    <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
+  </div>
+
+  <div class="Set-container" id="Account-Management">
+    <div id="Settings-lists">
+        <p class="Quicklinks-name">Quicklinks</p>
+        <ul class="Settings-link">
+            <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToEdit()"> Edit Profile</a></li>
+            <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToLinks()"> My Links</a></li>
+            <li><i class="fa-solid fa-pen-to-square"></i><b><u> Account Management</u></b></li>
+        </ul>
+    </div>
+    
+    <header class="circle">
+    <i class="fa-solid fa-pen-to-square"></i>
+    </header>
+
+    <label for="email" class="email">Email</label>
+    <input class= "Email-input" type="email" placeholder="Enter New Email" name="email" required>
+
+    <label for="psw" class="psw">Password</label>
+    <input class= "Pass-input" type="password" placeholder="Enter New Password" name="psw" required>
+
+    <button class="Delete-button" type="button" onclick="closeSettings()">Delete Account</button>
+
+    <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
+    <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
+  </div>
+
+</div>
+<!-- Script for Setting Tabs-->
 <script src="https://kit.fontawesome.com/b91caa2f2a.js" crossorigin="anonymous"></script>
+<script>
+
+var modal = document.getElementById("Settings");
+
+  function openSettings() {
+    document.getElementById("Settings").style.display = "block";
+  }
+
+  function closeSettings() {
+    modal.style.display = "none";
+  }
+
+  function saveSettings() {
+    window.location.href = "Profile.html";
+  }
+
+  function SwitchToEdit()
+  {
+      var edit = document.getElementById("Edit-Profile");
+      var link = document.getElementById("My-Links");
+      var account = document.getElementById("Account-Management");
+
+      edit.style.display = "block";
+      link.style.display = "none";
+      account.style.display = "none";
+  }
+
+  function SwitchToLinks()
+  {
+      var edit = document.getElementById("Edit-Profile");
+      var link = document.getElementById("My-Links");
+      var account = document.getElementById("Account-Management");
+
+      edit.style.display = "none";
+      link.style.display = "block";
+      account.style.display = "none";
+  }
+
+
+  function SwitchToAccount(){
+      var edit = document.getElementById("Edit-Profile");
+      var link = document.getElementById("My-Links");
+      var account = document.getElementById("Account-Management");
+
+      edit.style.display = "none";
+      link.style.display = "none";
+      account.style.display = "block";
+  }
+</script>
+
   </body>
 </html>
