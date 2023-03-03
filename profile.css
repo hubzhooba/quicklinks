@@ -247,7 +247,6 @@ body {
   /* The width is set to the total width of the container (100%) minus the left and right padding of the search input (20px each) */
   margin-left: 20px;
   margin-top: 50px;
-  border-top: 1px solid #999;
   padding: 0;
   overflow-y: auto;
   max-height: 200px;
