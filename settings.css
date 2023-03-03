@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
+#Edit-Profile{
+  display: block;
+}
 
-#container {
+#Account-Management{
+  display: none;
+}
+
+.container {
     position: fixed;
     top: 15%;
     left: 30%;
@@ -87,7 +94,7 @@
     right: 200px;
   }
 
-  input[type=text], textarea, label{
+  input[type=text], input[type=email], input[type=password], textarea, label{
     display: block;
 
     font-family: 'Jost';
@@ -98,7 +105,7 @@
     margin-left: 30%;
   }
 
-  .Name-input{
+  .Name-input, .Email-input, .Pass-input{
     display: inline-block;
     width: 56%;
     height: 40px;
@@ -143,6 +150,10 @@
   }
 
   .Back-button {
+    position: absolute;
+    bottom: 45px;
+    right: 190px;
+
     display: inline-block;
     cursor: pointer;
     transition-duration: 0.2s;
@@ -167,6 +178,10 @@
 }
 
 .Save-button {
+  position: absolute;
+  bottom: 45px;
+  right: 60px;
+
   display: inline-block;
   cursor: pointer;
   transition-duration: 0.2s;
@@ -190,6 +205,34 @@
   box-shadow: 0px 0px 1px #000000;
 }
 
+.Delete-button {
+  position: absolute;
+  bottom: 175px;
+  left: 180px;
+
+  display: inline-block;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  width: 180px;
+  height: 50px;
+  padding: 0;
+  
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  margin-top: 5px;
+  margin-left: 2%;
+  color: black;
+
+  border-radius: 10px;
+  background: #D9D9D9;
+  box-shadow: 0px 0px 1px #000000;
+}
+
 .Back-button:hover{
   background-color: white; 
   color: black; 
@@ -200,4 +243,10 @@
   background-color: white; 
   color: black; 
   border: 3px solid #3BBF68;
+}
+
+.Delete-button:hover{
+  background-color: #d42a2a; 
+  color: white; 
+  border: 3px solid #D9D9D9;
 }

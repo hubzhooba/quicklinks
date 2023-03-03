@@ -10,32 +10,79 @@
     </head>
     
     <body>
-        <div id="container">
+        <script>
+
+            function SwitchToEdit()
+            {
+                var account = document.getElementById("Account-Management");
+                var edit = document.getElementById("Edit-Profile");
+
+                edit.style.display = "block";
+                account.style.display = "none";
+            }
+
+            function SwitchToAccount(){
+                var account = document.getElementById("Account-Management");
+                var edit = document.getElementById("Edit-Profile");
+
+                edit.style.display = "none";
+                account.style.display = "block";
+            }
+        </script>
+
+
+        <form>
+        <div class="container" id="Edit-Profile">
 
             <div id="Settings-lists">
                 <p class="Quicklinks-name">Quicklinks</p>
                 <ul class="Settings-link">
-                    <li>Edit Profile</li>
+                    <li><b>Edit Profile</b></li>
                     <li>My Links</li>
-                    <li>Account Management</li>
+                    <li><a onclick="SwitchToAccount()">Account Management</a></li>
                 </ul>
             </div>
 
-             <header class="circle">
-             <img class="edit" src="images/edit_icon.png" alt="editpic"> </header>
+            <header class="circle">
+            <img class="edit" src="images/edit_icon.png" alt="editpic"> </header>
 
-             <label for="dname">Display Name</label>
-             <input class= "Name-input" type="text" placeholder="Enter Display Name" name="dname" required>
+            <label for="dname">Display Name</label>
+            <input class= "Name-input" type="text" placeholder="Enter Display Name" name="dname" required>
 
-             <label for="bio">Biography</label>
-             <textarea class="Bio-input" placeholder="Add Bio" name="bio" required></textarea>
+            <label for="bio">Biography</label>
+            <textarea class="Bio-input" placeholder="Add Bio" name="bio" required></textarea>
 
-             <label for="tags">Tags</label>
-             <textarea class="Tag-input" placeholder="Add Tag" name="tags" required></textarea>
+            <label for="tags">Tags</label>
+            <textarea class="Tag-input" placeholder="Add Tag" name="tags" required></textarea>
 
-             <button class="Back-button" type="submit">Back</button>
-             <button class="Save-button" type="submit">Save</button>
+            <button class="Back-button" type="submit">Back</button>
+            <button class="Save-button" type="submit">Save</button>
         </div>
 
+        <div class="container" id="Account-Management">
+            <div id="Settings-lists">
+                <p class="Quicklinks-name">Quicklinks</p>
+                <ul class="Settings-link">
+                    <li><a onclick="SwitchToEdit()">Edit Profile</a></li>
+                    <li>My Links</li>
+                    <li><b>Account Management</b></li>
+                </ul>
+            </div>
+            
+            <header class="circle">
+            <img class="edit" src="images/edit_icon.png" alt="editpic"> </header>
+
+            <label for="email">Email</label>
+            <input class= "Email-input" type="email" placeholder="Enter New Email" name="email" required>
+
+            <label for="psw">Password</label>
+            <input class= "Pass-input" type="password" placeholder="Enter New Password" name="psw" required>
+
+            <button class="Delete-button" type="submit">Delete Account</button>
+
+            <button class="Back-button" type="submit">Back</button>
+            <button class="Save-button" type="submit">Save</button>
+        </div>
+        </form>
     </body>
 </html>
