@@ -5,16 +5,14 @@
 <title> Landing Page </title>
 </head>
 
-   
 <header>
     <p id="quicklinks1">Quicklinks</p>
     <button class="login" type="button" onclick="openForm()">Login</button>
   </header>
 
- 
 <div class="modal" id="myForm"> <!-- TODO: Add image as shown in Figma -->
 
-    <form action="BaseProfile.html" class="login-container">
+    <form action="Profile.html" class="login-container">
     
     <input class="login-form-button" type="text" placeholder="Email Address" name="email" required id="e">
     <br>
@@ -27,7 +25,7 @@
 
 </div>
 
-<div class="modal" id="registerCheck">2
+<div class="modal" id="registerCheck">
     <div class="login-container">
         <h1 class ="register-thanks">Thank you for registering</h1>
         <button class="register-button" type="submit" >Click here to start editing your profile now</button>
@@ -74,9 +72,6 @@
 </div>
 </div>
 
-
-
-
 <script>
     var modal = document.getElementById("myForm");
     var modal1 = document.getElementById("registerCheck");
@@ -86,20 +81,15 @@
     }
 
     function openRegister() {
-        var val1 = document.getElementById('e').value;
-        var val2 = document.getElementById('p').value;
-    
-        var checkInput1 = document.getElementById("e");
-        var checkInput2 = document.getElementById("p")
-            if (checkInput1.value && checkInput2.value) {
-                document.getElementById("registerCheck").style.display = "block";
-                document.getElementById("myForm").style.display = "none";
-                return 0;
-            }
-            else {
-            }
+    var val1 = document.getElementById('e').value;
+    var val2 = document.getElementById('p').value;
 
+    var checkInput1 = document.getElementById("e");
+    var checkInput2 = document.getElementById("p")
+    if (checkInput1.value && checkInput2.value) {
+        window.location.href = "BaseProfile.html";
     }
+}
     
     window.onclick = function(event) {
         if (event.target == modal || event.target == modal1) {
@@ -110,7 +100,6 @@
             }
 
 </script>   
-        
 
     </body>
 
