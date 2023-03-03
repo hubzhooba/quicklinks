@@ -114,7 +114,7 @@
     <label for="psw" class="psw">Password</label>
     <input class= "Pass-input" type="password" placeholder="Enter New Password" name="psw" required>
 
-    <button class="Delete-button" type="button" onclick="closeSettings()">Delete Account</button>
+    <button class="Delete-button" type="button" onclick="deleteAccount()">Delete Account</button>
 
     <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
     <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
@@ -137,6 +137,10 @@ var modal = document.getElementById("Settings");
 
   function saveSettings() {
     window.location.href = "Profile.html";
+  }
+
+  function deleteAccount() {
+    window.location.href = "Landing.html";
   }
 
   function SwitchToEdit()
