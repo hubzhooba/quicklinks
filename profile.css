@@ -42,14 +42,17 @@ body {
   font-size: 16px;
 }
 
+/* Container styles */
 .container {
-  height: 100vh;
-  width: 50%;
-  box-sizing: border-box;
+  height: 100vh; /* set the height of the container to 100% of the viewport height */
+  width: 50%; /* set the width of the container to 100% */
+  box-sizing: border-box; /* include padding and border in the element's total width and height */
   padding: 40px;
   background-color: hsl(0, 0%, 12%);
 }
 
+
+/* Header styles */
 .header {
   text-align: center;
   position: relative;
@@ -61,7 +64,7 @@ body {
   color: #aaa;
   text-align: center;
   display: block;
-  padding-top: 60px;
+  padding-top: 60px; /* adjust the value as needed to center the text */
 }
 .avatar {
   display: block;
@@ -106,6 +109,7 @@ body {
   font-size: 14px;
 }
 
+/* Links styles */
 .links {
   margin-top: 30px;
 }
@@ -132,6 +136,7 @@ body {
   margin-right: 10px;
 }
 
+/* Button styles */
 .buttons {
   position: absolute;
   top: 10px;
@@ -163,6 +168,7 @@ body {
   margin-left: 0;
 }
 
+/* New styles */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -194,7 +200,7 @@ body {
   text-align: center;
   transition: all 0.
 }
-
+/* Search bar styles */
 .search-bar {
   position: absolute;
   top: 20px;
@@ -214,7 +220,8 @@ body {
 }
 
 .search-bar button[type="submit"] {
-  margin-left: 10px;
+  position: absolute;
+  margin-left: 225px;
   padding: 10px;
   border: none;
   border-radius: 20px;
@@ -237,6 +244,8 @@ body {
 
 .result-box {
   width: calc(100% - 40px);
+  /* The width is set to the total width of the container (100%) minus the left and right padding of the search input (20px each) */
+  margin-left: 20px;
   margin-top: 50px;
   border-top: 1px solid #999;
   padding: 0;
