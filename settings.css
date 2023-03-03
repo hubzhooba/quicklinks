@@ -4,6 +4,10 @@
   display: block;
 }
 
+#My-Links{
+  display: none;
+}
+
 #Account-Management{
   display: none;
 }
@@ -17,7 +21,6 @@
 
     box-shadow: 0px 2px 2px #000000;
     border-radius: 25px;
-    /*background: linear-gradient(to right, #D9D9D9 25%,  #2C56EA 25% 75%);*/
     background:  #2C56EA;
 
   }
@@ -52,24 +55,28 @@
     padding: 0;
     width: 100%;
 
-    text-align: center;
+    text-align: left;
 }
 
 .Settings-link li{
     display: block;
+    cursor:pointer;
 
-    background: url(images/edit_icon.png) no-repeat top left;
-    background-size: 16px;
     list-style: none;
 
     font-family: 'Jost';
     font-style: normal;
     font-size: 16px;
     line-height: 16px;
-    
+    letter-spacing: 1px;
+
     margin-top: 10px;
     margin-bottom: 10px;
     color: #000000;
+}
+
+.Settings-link li:hover{
+  font-weight: bold;
 }
 
 
@@ -78,22 +85,18 @@
     width: 90px;
     height: 90px;
     
+    text-align: end;
+    font-size: 24px;
+
     margin-top: 10%;
     margin-left: 55%;
     border-radius: 50%;
     
     background: #D9D9D9;
   }
-  
-  .edit{
-    position: absolute;
-    width: 24px;
-    height: 24px;
 
-    bottom: 385px;
-    right: 200px;
-  }
 
+/*Input Texts Properties*/
   input[type=text], input[type=email], input[type=password], textarea, label{
     display: block;
 
@@ -149,19 +152,98 @@
     box-shadow: 0px 1px 1px #000000;
   }
 
-  .Back-button {
+/*My-Links Properties*/  
+  #My-Link{
     position: absolute;
-    bottom: 45px;
-    right: 190px;
+    top: 165px;
 
+    display: inline-block;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    margin-left: 27%;
+
+    width: 50%;
+    height: 50px;
+
+    padding-left: 30px;
+    margin-bottom: 5px;
+
+    border-radius: 10px;
+    background: #D9D9D9;
+    box-shadow: 0px 1px 1px #000000;
+  }
+
+  h3{
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  #Facebook-Link{
+    position: absolute;
+    top: 240px;
+
+    display: inline-block;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    margin-left: 27%;
+
+    width: 50%;
+    height: 30px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    margin-bottom: 5px;
+
+    border-radius: 10px;
+    background: #D9D9D9;
+    box-shadow: 0px 1px 1px #000000;
+  }
+
+  #Twitter-Link{
+    position: absolute;
+    top: 290px;
+
+    display: inline-block;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    margin-left: 27%;
+
+    width: 50%;
+    height: 30px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    margin-bottom: 5px;
+
+    border-radius: 10px;
+    background: #D9D9D9;
+    box-shadow: 0px 1px 1px #000000;
+  }
+
+/*Button Properties*/
+  button[type="submit"], .Back-button, .Delete-button{
+    position: absolute;
     display: inline-block;
     cursor: pointer;
     transition-duration: 0.2s;
 
-    width: 120px;
     height: 50px;
     padding: 0;
-    
+
     font-family: 'Jost';
     font-style: normal;
     font-weight: bold;
@@ -169,84 +251,147 @@
     letter-spacing: 1px;
 
     margin-top: 5px;
-    margin-left: 48%;
-    color: #FFFFFF;
 
     border-radius: 10px;
-    background: #181A1B;
     box-shadow: 0px 0px 1px #000000;
-}
+  }
 
-.Save-button {
-  position: absolute;
-  bottom: 45px;
-  right: 60px;
+  .Back-button {
+    bottom: 45px;
+    right: 190px;
 
-  display: inline-block;
-  cursor: pointer;
-  transition-duration: 0.2s;
+    width: 120px;
+    margin-left: 48%;
 
-  width: 120px;
-  height: 50px;
-  padding: 0;
-  
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: 1px;
+    color: #FFFFFF;
+    background: #181A1B;
+  }
 
-  margin-top: 5px;
-  margin-left: 2%;
-  color: #FFFFFF;
+ .Save-button {
+    bottom: 45px;
+    right: 60px;
 
-  border-radius: 10px;
-  background: #3BBF68;
-  box-shadow: 0px 0px 1px #000000;
-}
+    width: 120px;
+    margin-left: 2%;
 
-.Delete-button {
-  position: absolute;
-  bottom: 175px;
-  left: 180px;
+    color: #FFFFFF;
+    background: #3BBF68;
+  }
 
-  display: inline-block;
-  cursor: pointer;
-  transition-duration: 0.2s;
+  .Delete-button {
+    bottom: 175px;
+    left: 180px;
 
-  width: 180px;
-  height: 50px;
-  padding: 0;
-  
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: 1px;
+    width: 180px;
+    margin-left: 2%;
 
-  margin-top: 5px;
-  margin-left: 2%;
-  color: black;
+    color: black;
+    background: #D9D9D9;
+  }
 
-  border-radius: 10px;
-  background: #D9D9D9;
-  box-shadow: 0px 0px 1px #000000;
-}
+  .Add-button, button[class^="Edit-button"], button[class^="Remove-button"]{
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.2s;
 
-.Back-button:hover{
-  background-color: white; 
-  color: black; 
-  border: 3px solid #181A1B;
-}
+    padding: 0;
 
-.Save-button:hover{
-  background-color: white; 
-  color: black; 
-  border: 3px solid #3BBF68;
-}
+    margin-top: 5px;
+    margin-left: 2%;
 
-.Delete-button:hover{
-  background-color: #d42a2a; 
-  color: white; 
-  border: 3px solid #D9D9D9;
-}
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px #000000;
+  } 
+
+  .Add-button{
+    top: 160px;
+    right: 30px;
+
+    width: 80px;
+    height: 50px;
+    
+    font-size: 32px;
+
+    color: #3BBF68;
+    background: #D9D9D9;
+  }
+
+  button[class^="Edit-button"]{
+    right: 70px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 24px;
+
+    color: #181A1B;
+
+    background: #D9D9D9;
+  }
+
+  .Edit-button_1{
+    top: 235px;
+  }
+
+  .Edit-button_2{
+    top: 285px;
+  }
+
+  button[class^="Remove-button"]{
+    right: 25px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 24px;
+
+    color: #d42a2a; 
+    background: #D9D9D9;
+  }
+
+  .Remove-button_1{
+    top: 235px;
+  }
+
+  .Remove-button_2{
+    top: 285px;
+  }
+
+
+/*Button hover Properties*/
+  .Back-button:hover{
+    background-color: white; 
+    color: black; 
+    border: 3px solid #181A1B;
+  }
+
+  .Save-button:hover{
+    background-color: white; 
+    color: black; 
+    border: 3px solid #3BBF68;
+  }
+
+  .Add-button:hover{
+    background-color: #3BBF68; 
+    color: white; 
+    border: 2px solid #D9D9D9;
+  }
+
+  button[class^="Edit-button"]:hover{
+    background: #181A1B;
+    color: white;
+    border: 2px solid #D9D9D9;
+  }
+
+  button[class^="Remove-button"]:hover{
+    background-color: #d42a2a; 
+    color: white; 
+    border: 2px solid #D9D9D9;
+  }
+
+  .Delete-button:hover{
+    background-color: #d42a2a; 
+    color: white; 
+    border: 3px solid #D9D9D9;
+  }
