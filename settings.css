@@ -18,11 +18,9 @@
     left: 30%;
     width: 626px;
     height: 545px;
-
     box-shadow: 0px 2px 2px #000000;
     border-radius: 25px;
     background:  #2C56EA;
-
   }
 
   #Settings-lists{
@@ -32,7 +30,6 @@
     width: 20%;
     height: 525px;
     padding: 10px;
-
     box-shadow: 0px 2px 2px #000000;
     border-radius: 10px;
     background: #D9D9D9;
@@ -45,7 +42,6 @@
     font-size: 24px;
     line-height: 20px;
     display: block;
-
     text-align: center;
     color: #181A1B;
   }
@@ -54,22 +50,18 @@
     margin-top: 150px;
     padding: 0;
     width: 100%;
-
     text-align: left;
 }
 
 .Settings-link li{
     display: block;
     cursor:pointer;
-
     list-style: none;
-
     font-family: 'Jost';
     font-style: normal;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: 1px;
-
     margin-top: 10px;
     margin-bottom: 10px;
     color: #000000;
@@ -84,27 +76,20 @@
     display: block;
     width: 90px;
     height: 90px;
-    
     text-align: end;
     font-size: 24px;
-
     margin-top: 10%;
     margin-left: 55%;
     border-radius: 50%;
-    
     background: #D9D9D9;
   }
 
-
-/*Input Texts Properties*/
   input[type=text], input[type=email], input[type=password], textarea, label{
     display: block;
-
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-
     margin-left: 30%;
   }
 
@@ -112,11 +97,9 @@
     display: inline-block;
     width: 56%;
     height: 40px;
-
     padding: 1px 10px;
     margin-top: 1px;
     margin-bottom: 5px;
-
     border-radius: 10px;
     background: #D9D9D9;
     box-shadow: 0px 1px 1px #000000;
@@ -127,11 +110,9 @@
     width: 55%;
     height: 100px;
     resize: none;
-
     padding: 10px 15px;
     margin-top: 1px;
     margin-bottom: 5px;
-
     border-radius: 10px;
     background: #D9D9D9;
     box-shadow: 0px 1px 1px #000000;
@@ -142,36 +123,27 @@
     width: 56%;
     height: 20px;
     resize: none;
-    
     padding: 5px 10px;
     margin-top: 1px;
     margin-bottom: 5px;
-
     border-radius: 10px;
     background: #D9D9D9;
     box-shadow: 0px 1px 1px #000000;
   }
 
-/*My-Links Properties*/  
   #My-Link{
     position: absolute;
     top: 165px;
-
     display: inline-block;
-
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-
     margin-left: 27%;
-
     width: 50%;
     height: 50px;
-
     padding-left: 30px;
     margin-bottom: 5px;
-
     border-radius: 10px;
     background: #D9D9D9;
     box-shadow: 0px 1px 1px #000000;
@@ -185,24 +157,18 @@
   #Facebook-Link{
     position: absolute;
     top: 240px;
-
     display: inline-block;
-
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-
     margin-left: 27%;
-
     width: 50%;
     height: 30px;
-
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 30px;
     margin-bottom: 5px;
-
     border-radius: 10px;
     background: #D9D9D9;
     box-shadow: 0px 1px 1px #000000;
@@ -211,47 +177,36 @@
   #Twitter-Link{
     position: absolute;
     top: 290px;
-
     display: inline-block;
-
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-
     margin-left: 27%;
-
     width: 50%;
     height: 30px;
-
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 30px;
     margin-bottom: 5px;
-
     border-radius: 10px;
     background: #D9D9D9;
     box-shadow: 0px 1px 1px #000000;
   }
 
-/*Button Properties*/
   button[type="submit"], .Back-button, .Delete-button{
     position: absolute;
     display: inline-block;
     cursor: pointer;
     transition-duration: 0.2s;
-
     height: 50px;
     padding: 0;
-
     font-family: 'Jost';
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 1px;
-
     margin-top: 5px;
-
     border-radius: 10px;
     box-shadow: 0px 0px 1px #000000;
   }
@@ -259,10 +214,8 @@
   .Back-button {
     bottom: 45px;
     right: 190px;
-
     width: 120px;
     margin-left: 48%;
-
     color: #FFFFFF;
     background: #181A1B;
   }
@@ -270,10 +223,8 @@
  .Save-button {
     bottom: 45px;
     right: 60px;
-
     width: 120px;
     margin-left: 2%;
-
     color: #FFFFFF;
     background: #3BBF68;
   }
@@ -281,10 +232,8 @@
   .Delete-button {
     bottom: 175px;
     left: 180px;
-
     width: 180px;
     margin-left: 2%;
-
     color: black;
     background: #D9D9D9;
   }
@@ -294,12 +243,9 @@
     display: inline-block;
     cursor: pointer;
     transition-duration: 0.2s;
-
     padding: 0;
-
     margin-top: 5px;
     margin-left: 2%;
-
     border-radius: 10px;
     box-shadow: 0px 0px 1px #000000;
   } 
@@ -307,26 +253,19 @@
   .Add-button{
     top: 160px;
     right: 30px;
-
     width: 80px;
     height: 50px;
-    
     font-size: 32px;
-
     color: #3BBF68;
     background: #D9D9D9;
   }
 
   button[class^="Edit-button"]{
     right: 70px;
-
     width: 40px;
     height: 40px;
-
     font-size: 24px;
-
     color: #181A1B;
-
     background: #D9D9D9;
   }
 
@@ -340,12 +279,9 @@
 
   button[class^="Remove-button"]{
     right: 25px;
-
     width: 40px;
     height: 40px;
-
     font-size: 24px;
-
     color: #d42a2a; 
     background: #D9D9D9;
   }
@@ -358,8 +294,6 @@
     top: 285px;
   }
 
-
-/*Button hover Properties*/
   .Back-button:hover{
     background-color: white; 
     color: black; 

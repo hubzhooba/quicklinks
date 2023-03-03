@@ -15,14 +15,8 @@ header {
     z-index: 1;
     display: flex;
     margin-top: 15px;
-    /* background-color: #FFFFFF;
-    width: 100%; */
-
 }
 #quicklinks1 {
-    /* Quicklinks */
-    
-    
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
@@ -30,7 +24,6 @@ header {
     margin-left: 160px;
     margin-top: 70px;
     display: inline;
-
     color: #2C56EA;
 }
   
@@ -99,9 +92,6 @@ header {
 }
 
 #networking {
-
-
-
 font-family: 'Jost';
 font-style: normal;
 font-weight: 700;
@@ -112,7 +102,6 @@ justify-content: center;
 text-align: center;
 margin-top: 258px;
 color: #C6C1BA;
-
 }
 
 #everything {
@@ -129,21 +118,15 @@ color: #2C56EA;
 }
 
 #quicklinks2 {
-    /* Quicklinks */
-    
-
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
-
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     bottom: 0;
-
     color: #FFFFFF;
 }
 
