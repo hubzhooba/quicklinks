@@ -1,7 +1,8 @@
 // Express
 import { Router } from "express";
 // Routers
-// Sample import: import signupRouter from "./signupRouter.js";
+import userRouter from "./userRouter.js";
+
 const routes = Router();
 
 /*
@@ -12,11 +13,10 @@ routes.get("/", (req, res) => {
   res.render("index");
 });
 
-
 /*
-  Use routes defined in ./profileRouter.js
+  Use routes defined in ./userRouter.js
 */
-// Sample: routes.use(profileRouter);
+routes.use("/users", userRouter);
 
 /* 
   If the route is not defined in the server, render `../views/error.hbs`.
