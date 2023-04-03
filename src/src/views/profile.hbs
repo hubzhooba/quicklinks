@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="buttons">
+          <button class="share-btn"><i class="fas fa-share"></i></button>
+          <button class="settings-btn"><i class="fas fa-cog"></i></button>
+        </div>
+        <img class="avatar" src="{{user.avatar.data.toString('base64')}}" alt="">
+        <h1 class="display-name">{{user.username}}</h1>
+        <p class="biography">{{user.bio}}</p>
+        <div class="hashtags">
+          {{#each user.tags}}
+            <span>{{this}}</span>
+          {{/each}}
+        </div>
+      </div>
+  
+      <div class="links">
+        {{#each user.links}}
+          <a class="link" href="{{this}}">{{this}}</a>
+        {{/each}}
+      </div>
+  
+    </div>
+
+    <script src="https://kit.fontawesome.com/b91caa2f2a.js" crossorigin="anonymous"></script>
+  </body>
+</html>
