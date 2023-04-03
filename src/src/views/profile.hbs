@@ -145,73 +145,69 @@
     <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
     <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
 </div>
-<script src="https://kit.fontawesome.com/b91caa2f2a.js" crossorigin="anonymous"></script>
-
 <script>
-{{!-- Script for Setting Tabs --}}
-{{#with Settings as |modal|}}
-  function openSettings() {
-    document.getElementById("{{modal}}").style.display = "block";
-  }
+        {{!-- Script for Setting Tabs --}}
+        {{#with Settings as |modal|}}
+        function openSettings() {
+            document.getElementById("{{modal}}").style.display = "block";
+        }
 
-  function closeSettings() {
-    document.getElementById("{{modal}}").style.display = "none";
-  }
-{{/with}}
+        function closeSettings() {
+            document.getElementById("{{modal}}").style.display = "none";
+        }
+        {{/with}}
 
-{{!-- Script for Switching Tabs --}}
-{{#each Tabs as |tab|}}
-  function SwitchTo{{tab}}(){
-    {{#each Tabs as |otherTab|}}
-      var {{otherTab}} = document.getElementById("{{otherTab}}");
-    {{/each}}
+        {{!-- Script for Switching Tabs --}}
+        {{#each Tabs as |tab|}}
+        function SwitchTo{{tab}}(){
+            {{#each Tabs as |otherTab|}}
+            var {{otherTab}} = document.getElementById("{{otherTab}}");
+            {{/each}}
 
-    {{tab}}.style.display = "block";
-    {{#each Tabs as |otherTab|}}
-      {{#if (not (eq tab otherTab))}}
-        {{otherTab}}.style.display = "none";
-      {{/if}}
-    {{/each}}
-  }
-{{/each}}
+            {{tab}}.style.display = "block";
+            {{#each Tabs as |otherTab|}}
+            {{#if (not (eq tab otherTab))}}
+            {{otherTab}}.style.display = "none";
+            {{/if}}
+            {{/each}}
+        }
+        {{/each}}
+    </script>
 
-{{!-- Script for Dropdown --}}
-<script src="autocomplete.js"></script>
-<script src="https://kit.fontawesome.com/b91caa2f2a.js" crossorigin="anonymous"></script>
+    <script src="autocomplete.js"></script>
+    <script>
+        function search() {
+            var query = document.getElementById("search-box").value;
+            if (query.toLowerCase() === "lilman") {
+                window.location.href = "Profile2.html";
+            } else if (query.toLowerCase() === "hackerman"){
+                window.location.href = "Profile3.html";
+            } else {
+                alert('Profile Does Not Exist')
+            }
+        }
 
-<script>
-  function search() {
-    var query = document.getElementById("search-box").value;
-    if (query.toLowerCase() === "lilman") {
-      window.location.href = "Profile2.html";
-    } else if (query.toLowerCase() === "hackerman"){
-      window.location.href = "Profile3.html";
-    } else {
-      alert('Profile Does Not Exist')
-    }
-  }
+        function updateSelectedProfile() {
+            var dropdown = document.getElementById("profile-dropdown");
+            var query = document.getElementById("search-box").value.toLowerCase();
+            if (query === "lilman") {
+                dropdown.value = "Profile2.html";
+                dropdown.style.display = "block";
+            } else if (query === "hackerman") {
+                dropdown.value = "Profile3.html";
+                dropdown.style.display = "block";
+            } else {
+                dropdown.value = "";
+                dropdown.style.display = "none";
+            }
+        }
 
-  function updateSelectedProfile() {
-    var dropdown = document.getElementById("profile-dropdown");
-    var query = document.getElementById("search-box").value.toLowerCase();
-    if (query === "lilman") {
-      dropdown.value = "Profile2.html";
-      dropdown.style.display = "block";
-    } else if (query === "hackerman") {
-      dropdown.value = "Profile3.html";
-      dropdown.style.display = "block";
-    } else {
-      dropdown.value = "";
-      dropdown.style.display = "none";
-    }
-  }
-
-  function goToSelectedProfile() {
-    var dropdown = document.getElementById("profile-dropdown");
-    if (dropdown.value) {
-      window.location.href = dropdown.value;
-    }
-  }
-</script>
+        function goToSelectedProfile() {
+            var dropdown = document.getElementById("profile-dropdown");
+            if (dropdown.value) {
+                window.location.href = dropdown.value;
+            }
+        }
+    </script>
 </body>
 </html>
