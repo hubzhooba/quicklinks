@@ -19,5 +19,5 @@ successRouter.get("/user", (req, res) => {
     };
   
     // render `../views/profile.hbs`
-    res.render("profile", details);
+    res.render("user", details);
   });
