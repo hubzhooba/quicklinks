@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." id="search-box" autocomplete="off">
+                <button type="button" onclick="search()">Search</button>
+            </div>
+            <div class="result-box"></div>
+            <div class="buttons">
+                <button class="share-btn"><i class="fas fa-share"></i></button>
+                <button class="settings-btn" onclick="openSettings()"><i class="fas fa-cog"></i></button>
+            </div>
+            <img class="avatar" src="images/profile.png" alt="Avatar">
+            <h1 class="display-name">Hoobahubz</h1>
+            <p class="biography">I love making computers do cool things.</p>
+            <div class="hashtags">
+                <span>#art</span>
+                <span>#tech</span>
+                <span>#creative</span>
+            </div>
+        </div>
+        <div class="links">
+            <a class="link" href="https://www.facebook.com/ian"><i class="fab fa-facebook"></i> Facebook</a>
+            <a class="link" href="https://www.instagram.com/johndoe"><i class="fab fa-instagram"></i> Instagram</a>
+            <a class="link" href="https://www.twitter.com/johndoe"><i class="fab fa-twitter"></i> Twitter</a>
+            <a class="link" href="mailto:johndoe@example.com"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/b91caa2f2a.js" crossorigin="anonymous"></script>
+
+    <div class="dropdown" style="display:none;">
+        <select id="profile-dropdown" onchange="goToSelectedProfile()">
+            <option value="">Select a profile</option>
+            <option value="Profile2.html">Profile 2</option>
+            <option value="Profile3.html">Profile 3</option>
+        </select>
+    </div>
+    
+    <div class="modal" id="Settings">
+    <div class="Set-container" id="Edit-Profile">
+
+      <div id="Settings-lists">
+        <p class="Quicklinks-name">Quicklinks</p>
+        <ul class="Settings-link">
+          <li><i class="fa-solid fa-pen-to-square"></i><b><u> Edit Profile</u></b></li>
+          <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToLinks()"> My Links</a></li>
+          <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToAccount()"> Account Management</a></li>
+        </ul>
+      </div>
+
+      <header class="circle">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </header>
+
+      <label for="dname" class="dname">Display Name</label>
+      <input class="Name-input" type="text" placeholder="Enter Display Name" name="dname" required>
+
+      <label for="bio" class="bio">Biography</label>
+      <textarea class="Bio-input" placeholder="Add Bio" name="bio" required></textarea>
+
+      <label for="tags" class="tags">Tags</label>
+      <textarea class="Tag-input" placeholder="Add Tag" name="tags" required></textarea>
+
+      <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
+      <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
+    </div>
+
+    <div class="Set-container" id="My-Links">
+      <div id="Settings-lists">
+        <p class="Quicklinks-name">Quicklinks</p>
+        <ul class="Settings-link">
+          <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToEdit()"> Edit Profile</a></li>
+          <li><i class="fa-solid fa-pen-to-square"></i><b><u> My Links</u></b></li>
+          <li><i class="fa-solid fa-pen-to-square"></i><a onclick="SwitchToAccount()"> Account Management</a></li>
+        </ul>
+      </div>
+
+    <div id="My-Link">
+        <h3>My Links</h3>
+    </div>
+
+    <button class="Add-button" type="button">
+        <i class="fa-solid fa-circle-plus"></i>
+    </button>
+
+    <div id="Facebook-Link">Facebook</div>
+    <button class="Edit-button_1" type="button">
+        <i class="fa-solid fa-pen-to-square"></i>
+    </button>
+    <button class="Remove-button_1" type="button">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </button>
+
+    <div id="Twitter-Link">Twitter</div>
+    <button class="Edit-button_2" type="button">
+        <i class="fa-solid fa-pen-to-square"></i>
+    </button>
+    <button class="Remove-button_2" type="button">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </button>
+
+    <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
+    <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
+
+
+    <div class="Set-container" id="Account-Management">
+    <div id="Settings-lists">
+        <p class="Quicklinks-name">Quicklinks</p>
+        <ul class="Settings-link">
+            <li>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <a onclick="SwitchToEdit()">Edit Profile</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <a onclick="SwitchToLinks()">My Links</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <b><u>Account Management</u></b>
+            </li>
+        </ul>
+    </div>
+
+    <header class="circle">
+        <i class="fa-solid fa-pen-to-square"></i>
+    </header>
+
+    <label for="email" class="email">Email</label>
+    <input class= "Email-input" type="email" placeholder="Enter New Email" name="email" required>
+
+    <label for="psw" class="psw">Password</label>
+    <input class= "Pass-input" type="password" placeholder="Enter New Password" name="psw" required>
+
+    <button class="Delete-button" type="button" onclick="deleteAccount()">Delete Account</button>
+
+    <button class="Back-button" type="button" onclick="closeSettings()">Back</button>
+    <button class="Save-button" type="submit" onclick="saveSettings()">Save</button>
+</div>
+<script>
+        {{!-- Script for Setting Tabs --}}
+        {{#with Settings as |modal|}}
+        function openSettings() {
+            document.getElementById("{{modal}}").style.display = "block";
+        }
+
+        function closeSettings() {
+            document.getElementById("{{modal}}").style.display = "none";
+        }
+        {{/with}}
+
+        {{!-- Script for Switching Tabs --}}
+        {{#each Tabs as |tab|}}
+        function SwitchTo{{tab}}(){
+            {{#each Tabs as |otherTab|}}
+            var {{otherTab}} = document.getElementById("{{otherTab}}");
+            {{/each}}
+
+            {{tab}}.style.display = "block";
+            {{#each Tabs as |otherTab|}}
+            {{#if (not (eq tab otherTab))}}
+            {{otherTab}}.style.display = "none";
+            {{/if}}
+            {{/each}}
+        }
+        {{/each}}
+    </script>
+
+    <script src="autocomplete.js"></script>
+    <script>
+        function search() {
+            var query = document.getElementById("search-box").value;
+            if (query.toLowerCase() === "lilman") {
+                window.location.href = "Profile2.html";
+            } else if (query.toLowerCase() === "hackerman"){
+                window.location.href = "Profile3.html";
+            } else {
+                alert('Profile Does Not Exist')
+            }
+        }
+
+        function updateSelectedProfile() {
+            var dropdown = document.getElementById("profile-dropdown");
+            var query = document.getElementById("search-box").value.toLowerCase();
+            if (query === "lilman") {
+                dropdown.value = "Profile2.html";
+                dropdown.style.display = "block";
+            } else if (query === "hackerman") {
+                dropdown.value = "Profile3.html";
+                dropdown.style.display = "block";
+            } else {
+                dropdown.value = "";
+                dropdown.style.display = "none";
+            }
+        }
+
+        function goToSelectedProfile() {
+            var dropdown = document.getElementById("profile-dropdown");
+            if (dropdown.value) {
+                window.location.href = dropdown.value;
+            }
+        }
+    </script>
+</body>
+</html>

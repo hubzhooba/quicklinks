@@ -15,8 +15,14 @@ header {
     z-index: 1;
     display: flex;
     margin-top: 15px;
+    /* background-color: #FFFFFF;
+    width: 100%; */
+
 }
 #quicklinks1 {
+    /* Quicklinks */
+    
+    
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
@@ -24,10 +30,32 @@ header {
     margin-left: 160px;
     margin-top: 70px;
     display: inline;
+
     color: #2C56EA;
 }
-  
-  #star-five {
+
+
+
+#aboutus {
+    /* About Us */
+    
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    display: inline-block;
+    margin-top: 55px;
+    margin-left: 800px;
+   
+   
+
+    display: inline-block;
+
+    color: #FFFFFF;
+}
+
+#star-five {
+    /* Star 5 */
     position: absolute;
     width: 35.95px;
     height: 32.21px;
@@ -35,9 +63,13 @@ header {
     margin-top: 34px;
     background: #FFFFFF;
     transform: matrix(0.86, 0.5, -0.59, 0.81, 0, 0);
-  }
-  
-  #star-four {
+
+}
+
+#star-four {
+    /* Star 4 */
+
+
     position: absolute;
     width: 37px;
     height: 31px;
@@ -46,24 +78,28 @@ header {
     margin-right: 50px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  #line {
+}
+
+#line {
+    /* Line 2 */
+
+
     position: absolute;
     width: 51px;
     height: 0px;
     display: inline;
     border: 1px solid #000000;
     transform: rotate(90deg);
-  }
-  
-  .login {
+}
+
+.login {
+    /* Login */
     position: absolute;
     top: 54px;
     right: 126px;
     left: 1500px;
-    width: 290px;
-    height: 90px;
+    width: 320px;
+    height: 100px;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
@@ -72,7 +108,8 @@ header {
     background-color: #2C56EA;
     border-radius: 25px;
     color: #FFFFFF;
-  }
+    
+}
 
 #getstarted {
     position: relative;
@@ -92,6 +129,9 @@ header {
 }
 
 #networking {
+
+
+
 font-family: 'Jost';
 font-style: normal;
 font-weight: 700;
@@ -102,6 +142,7 @@ justify-content: center;
 text-align: center;
 margin-top: 258px;
 color: #C6C1BA;
+
 }
 
 #everything {
@@ -118,15 +159,21 @@ color: #2C56EA;
 }
 
 #quicklinks2 {
+    /* Quicklinks */
+    
+
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
+
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     bottom: 0;
+
     color: #FFFFFF;
 }
 
@@ -240,8 +287,7 @@ color: #2C56EA;
 .image-container{
     display: fixed;
     border-radius: 32px;
-    margin: 36px auto 0;    
-    
+    margin: 35px auto 0;
     margin-top: 35px;
     width: 350px;
     border: 1px solid #000000;
@@ -257,40 +303,23 @@ color: #2C56EA;
         border-radius: 32px;
     
 }
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    text-align: center;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+.login-popup {
+    display: none;
+}
 
 .login-container {
     line-height:50px;
     text-align: center;
     vertical-align: middle;
+    display: table-cell;
     border-radius: 57px;
-    margin-left: 600px;
-    margin-right: 600px;
+    width: 500px;
+    height: 500px;
     padding: 10px;
     background-color: #2C56EA;
     position: relative;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    
 }
 
-.login-popup.show {
-    display: block;
-  }
 
 .login-form-button {
     width: 400px;
@@ -322,31 +351,4 @@ color: #2C56EA;
     margin-left: 500px;
     bottom: 0;
     color: #fff
-}
-
-.register-thanks {
-  font-family: 'Jost';
-  font-style: normal;
-  color: #fff;
-}
-
-#myUL {
-    /* Remove default list styling */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  #myUL li a {
-    border: 1px solid #ddd; /* Add a border to all links */
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6; /* Grey background color */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove default text underline */
-    font-size: 18px; /* Increase the font-size */
-    color: black; /* Add a black text color */
-    display: block; /* Make it into a block element to fill the whole list */
-}
-#myUL li a:hover:not(.header) {
-    background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
