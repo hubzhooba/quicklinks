@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Style.hbs">
     <title> Landing Page </title>
 </head>
     <body>
@@ -58,44 +58,42 @@
                 <p class="card-text">Choose what side of you that you want to share.</p>
             </div>
             <div id="rectangle7">
-                <div class = "image-container">
-                    <img src="images/network_ui.png" loading="lazy" style="width: 350px; height:459px;" />
-                </div>
-                <h3 class="card-title"> 3. Network</h3>
-                <p class="card-text">Get networking by sharing your quicklinks with other users.</p>
-            </div>
-        </div>
+    <div class="image-container">
+        <img src="images/network_ui.png" loading="lazy" style="width: 350px; height:459px;" />
+    </div>
+    <h3 class="card-title"> 3. Network</h3>
+    <p class="card-text">Get networking by sharing your quicklinks with other users.</p>
+</div>
+</div>
 
-        <script>
-        var modal = document.getElementById("myForm");
-        var modal1 = document.getElementById("registerCheck");
+<script>
+    var modal = document.getElementById("myForm");
+    var modal1 = document.getElementById("registerCheck");
 
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function openRegister() {
+        var val1 = document.getElementById('e').value;
+        var val2 = document.getElementById('p').value;
+
+        if (val1 && val2) {
+            window.location.href = "BaseProfile.html";
         }
+    }
 
-        function openRegister() {
-            var val1 = document.getElementById('e').value;
-            var val2 = document.getElementById('p').value;
-
-            var checkInput1 = document.getElementById("e");
-            var checkInput2 = document.getElementById("p")
-            if (checkInput1.value && checkInput2.value) {
-                window.location.href = "BaseProfile.html";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal || event.target == modal1) {
+    window.onclick = function (event) {
+        if (event.target == modal || event.target == modal1) {
             modal.style.display = "none";
             modal1.style.display = "none";
-            }
         }
-        </script>
+    }
+</script>
 
-        <footer> 
-        <p id="quicklinks2">Quicklinks</p> 
-        </footer>
+<footer>
+    <p id="quicklinks2">Quicklinks</p>
+</footer>
 
-    </body>
+</body>
 </html>
