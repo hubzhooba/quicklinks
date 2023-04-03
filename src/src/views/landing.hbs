@@ -83,8 +83,24 @@
         }
     }
 
+<<<<<<< Updated upstream
     window.onclick = function (event) {
         if (event.target == modal || event.target == modal1) {
+=======
+        function openRegister() {
+            var val1 = document.getElementById('e').value;
+            var val2 = document.getElementById('p').value;
+
+            var checkInput1 = document.getElementById("e");
+            var checkInput2 = document.getElementById("p")
+            if (checkInput1.value && checkInput2.value) {
+                window.location.href = "BaseProfile.html"; //To be changed to /profile
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal || event.target == modal1) {
+>>>>>>> Stashed changes
             modal.style.display = "none";
             modal1.style.display = "none";
         }
