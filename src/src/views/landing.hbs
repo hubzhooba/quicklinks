@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Style.css">
+    <title> Landing Page </title>
+</head>
+    <body>
+        <header>
+            <p id="quicklinks1">Quicklinks</p>
+            <button class="login" type="button" onclick="openForm()">Login</button>
+        </header>
+            <div class="modal" id="myForm">
+            <form action="Profile.html" class="login-container">
+                <input class="login-form-button" type="text" placeholder="Email Address" name="email" required id="e">
+                <br>
+                <input class="login-form-button" type="password" placeholder="Password" name="psw" required id="p">
+                <br>
+                <button type="button" class="register-button" onclick="openRegister()" id="register" >Register</button>
+                <br> 
+                <button class="login-button" type="submit">Login</button>
+                <p class ="login-quicklinks"> Quicklinks</p>
+            </form>
+        </div>
+
+        <div class="modal" id="registerCheck">
+            <div class="login-container">
+                <h1 class ="register-thanks">Thank you for registering</h1>
+                <button class="register-button" type="submit">Click here to start editing your profile now</button>
+            </div>
+        </div>
+
+        <p id="networking"> Networking has <br> never been so easy.</p>
+        <p id="everything"> Everything, everywhere all at once.</p>
+        <button id="getstarted" type="button" onclick="openForm()">Get Started</button>
+        <div id="rectangle4"></div>
+        <div id="how-quicklink-works">
+            <p>How Quicklink <br> works.</p>
+        </div>
+
+        <div id="simple">
+            <p>Simple, Secure, People-Powered</p>
+        </div>
+        <div class="container">
+            <div id="rectangle5">
+                <div class = "image-container">
+                    <img src="images/editprofile_ui.PNG" loading="lazy" style="width: 350px; height:459px;" />
+                </div>               
+                <div class="card-heading">
+                    <h3 class="card-title"> 1. Create your profile</h3>
+                    <p class="card-text">Customize your profile and make your presence seen.</p>
+                </div>
+            </div>
+            <div id="rectangle6">
+                <div class = "image-container">
+                    <img src="images/mylinks_ui.PNG" loading="lazy" style="width: 350px; height:459px;" />
+                </div>
+                <h3 class="card-title"> 2. Set your links</h3>
+                <p class="card-text">Choose what side of you that you want to share.</p>
+            </div>
+            <div id="rectangle7">
+                <div class = "image-container">
+                    <img src="images/network_ui.png" loading="lazy" style="width: 350px; height:459px;" />
+                </div>
+                <h3 class="card-title"> 3. Network</h3>
+                <p class="card-text">Get networking by sharing your quicklinks with other users.</p>
+            </div>
+        </div>
+
+        <script>
+        var modal = document.getElementById("myForm");
+        var modal1 = document.getElementById("registerCheck");
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function openRegister() {
+            var val1 = document.getElementById('e').value;
+            var val2 = document.getElementById('p').value;
+
+            var checkInput1 = document.getElementById("e");
+            var checkInput2 = document.getElementById("p")
+            if (checkInput1.value && checkInput2.value) {
+                window.location.href = "BaseProfile.html";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal || event.target == modal1) {
+            modal.style.display = "none";
+            modal1.style.display = "none";
+            }
+        }
+        </script>
+
+        <footer> 
+        <p id="quicklinks2">Quicklinks</p> 
+        </footer>
+
+    </body>
+</html>
